@@ -55,3 +55,34 @@ footer {
   border: 3px solid white;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
+/* Title animations */
+@keyframes flyUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flyDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to section titles */
+h2.fly-up {
+  animation: flyUp 1s ease-out;
+}
+
+h2.fly-down {
+  animation: flyDown 1s ease-out;
+}
