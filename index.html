@@ -85,8 +85,134 @@
       <li>Facilitated training workshops on Individualized Education Plans (IEPs).</li>
     </ul>
 
-    <p><strong>Social Behaviour Change Officer</strong> – Breakthrough Action Kenya, Muhoroni (Feb 2024 – Sept 2024)</p>
-    <ul>
+    <!-- Social Behavior Change Section -->
+<section id="social-behavior-change" style="padding:40px 20px; background:#f9f9f9;">
+  <h2 class="fly-up">Social Behavior Change</h2>
+  <div class="sbc-container">
+    <!-- Left side: main content -->
+    <div class="sbc-content">
+      <p>
+        In Social Behavior Change activities, I have engaged diverse communities to strengthen 
+        health-seeking behaviors and improve awareness on maternal, child, and preventive health. 
+        This includes dialogues on prenatal and postnatal visits, effective net use, and promoting 
+        childhood vaccinations.
+      </p>
+    </div>
+
+    <!-- Right side: carousel -->
+    <div class="sbc-carousel">
+      <!-- Slide 1 -->
+      <div class="carousel-slide">
+        <div class="carousel-text">
+          <h3>Community Health Dialogue</h3>
+          <p>Benefits of prenatal and postnatal visits at Okwach Center.</p>
+        </div>
+        <div class="carousel-image">
+          <img src="d1.jpg" alt="Community health dialogue at Okwach Center">
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <div class="carousel-text">
+          <h3>Dialogue at Oduwo Catholic Church</h3>
+          <p>Engaging the community on health awareness at Oduwo Catholic Church grounds.</p>
+        </div>
+        <div class="carousel-image">
+          <img src="d2.jpg" alt="Dialogue at Oduwo Catholic Church grounds">
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <div class="carousel-text">
+          <h3>Effective Net Use & Vaccines</h3>
+          <p>Promoting net use and benefits of vaccines to under-5 children at Makindu AIC Kowawa.</p>
+        </div>
+        <div class="carousel-image">
+          <img src="d3.jpg" alt="Effective net use and vaccines at Makindu AIC Kowawa">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Two-column layout */
+.sbc-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Left column */
+.sbc-content {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Right column */
+.sbc-carousel {
+  flex: 1;
+  position: relative;
+  max-width: 450px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* Carousel slides */
+.carousel-slide {
+  display: none;
+  text-align: center;
+  padding: 15px;
+  animation: fade 1s;
+}
+
+.carousel-text {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #004080;
+}
+
+.carousel-image img {
+  width: 100%;
+  border-radius: 20px;
+  animation: spin 12s linear infinite; /* circular spin */
+}
+
+/* Animations */
+@keyframes fade {
+  from {opacity: .4;}
+  to {opacity: 1;}
+}
+
+@keyframes spin {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+}
+</style>
+
+<script>
+// Auto slide JavaScript
+let sbcIndex = 0;
+showSBC();
+
+function showSBC() {
+  let i;
+  let slides = document.querySelectorAll("#social-behavior-change .carousel-slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  sbcIndex++;
+  if (sbcIndex > slides.length) {sbcIndex = 1}    
+  slides[sbcIndex-1].style.display = "block";  
+  setTimeout(showSBC, 4000); // Change every 4 seconds
+}
+</script>
+
       <li>Led community outreach, dialogue, and action days.</li>
       <li>Conducted surveys and trained Community Health Promoters.</li>
     </ul>
