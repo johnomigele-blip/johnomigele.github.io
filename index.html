@@ -5,6 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - John Ochieng’ Migele</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Animation Styles -->
+  <style>
+    /* Moving title */
+    .moving-title {
+      display: inline-block;
+      white-space: nowrap;
+      animation: moveTitle 10s linear infinite;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    @keyframes moveTitle {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Fly-up animation */
+    .fly-up {
+      animation: flyUp 1.5s ease-out;
+    }
+
+    @keyframes flyUp {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Fly-down animation */
+    .fly-down {
+      animation: flyDown 1.5s ease-out;
+    }
+
+    @keyframes flyDown {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -13,36 +51,21 @@
     <p>Email: <a href="mailto:johnomigele@gmail.com">johnomigele@gmail.com</a> | Phone: 0759 926 350</p>
     <p>Community Health & Development Professional</p>
   </header>
+
   <h1 class="moving-title">John Ochieng’ Migele - Portfolio</h1>
-<style>
-.moving-title {
-  display: inline-block;
-  white-space: nowrap;
-  animation: moveTitle 10s linear infinite;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-@keyframes moveTitle {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-</style>
-
 
   <div class="container">
-    <h2>Profile</h2>
+    <h2 class="fly-up">Profile</h2>
     <p>Dynamic and results-driven Community Health and Development Professional with hands-on experience in digital health, programme implementation, and community mobilization. Skilled in ODK KoboCollect, eCHIS, SPSS, and QGIS, with a strong background in customer service and administration. Passionate about fostering healthier, more resilient communities through evidence-based interventions.</p>
 
-    <h2>Education</h2>
+    <h2 class="fly-down">Education</h2>
     <ul>
       <li><strong>BSc. Community Health and Development</strong> – JOOUST (Sep 2021 – Expected Oct 17, 2025)</li>
       <li><strong>Certificate in Information Technology</strong> – Renown Computer College (Aug 2021)</li>
       <li><strong>Certificate in GIS for Population and Development Studies</strong> – Online (Oct–Nov 2023)</li>
     </ul>
 
-    <h2>Key Skills</h2>
+    <h2 class="fly-up">Key Skills</h2>
     <ul>
       <li>Data Collection & Management: ODK KoboCollect, eCHIS, Google Forms</li>
       <li>Data Analysis & Reporting: SPSS, QGIS, Power BI, Excel</li>
@@ -53,7 +76,7 @@
       <li>Customer Service & Administration: Front desk, billing, client relations</li>
     </ul>
 
-    <h2>Professional Experience</h2>
+    <h2 class="fly-down">Professional Experience</h2>
     <p><strong>Assistant Inclusive Education Support Officer / Customer Care Desk</strong> – Ability Therapy Place, Nairobi (May 2025 – Sep 2025)</p>
     <ul>
       <li>Liaison between schools, communities, and the facility to strengthen partnerships.</li>
@@ -83,7 +106,7 @@
       <li>Implemented eCHIS V2, supported community health reporting, and household visits.</li>
     </ul>
 
-    <h2>Major Contributions & Achievements</h2>
+    <h2 class="fly-up">Major Contributions & Achievements</h2>
     <ul>
       <li>Co-led Kenya’s eCHIS version 2 pilot in Muhoroni Sub-county.</li>
       <li>Provided technical assistance to MOH on digital health and programme management.</li>
@@ -91,14 +114,14 @@
       <li>Instituted data-driven performance management through review meetings.</li>
     </ul>
 
-    <h2>Research & Projects</h2>
+    <h2 class="fly-down">Research & Projects</h2>
     <ul>
       <li>Final Year Research Project: Uptake of HIV Testing & Counselling among students.</li>
       <li>Study: Effectiveness of early OT intervention on children with cerebral palsy at JOOTRH.</li>
       <li>Assisted in multiple community health surveys.</li>
     </ul>
 
-    <h2>Certifications & Training</h2>
+    <h2 class="fly-up">Certifications & Training</h2>
     <ul>
       <li>Community Health Basic Module – AMREF Kenya</li>
       <li>Community Health Strategy Implementation – Makindu Dispensary</li>
@@ -107,7 +130,7 @@
       <li>Inclusive Education ToT Modules – Ability Therapy Place</li>
     </ul>
 
-    <h2>Community Involvement & Interests</h2>
+    <h2 class="fly-down">Community Involvement & Interests</h2>
     <ul>
       <li>Participation in local health campaigns and outreach.</li>
       <li>Advocacy for inclusive education and health equity.</li>
