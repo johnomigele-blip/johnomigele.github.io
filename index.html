@@ -85,7 +85,9 @@
       <li>Facilitated training workshops on Individualized Education Plans (IEPs).</li>
     </ul>
 
-    <!-- Social Behavior Change Section -->
+   
+
+<!-- Social Behavior Change Section -->
 <section id="social-behavior-change" style="padding:40px 20px; background:#f9f9f9;">
   <h2 class="fly-up">Social Behavior Change</h2>
   <div class="sbc-container">
@@ -103,32 +105,26 @@
     <div class="sbc-carousel">
       <!-- Slide 1 -->
       <div class="carousel-slide">
-        <div class="carousel-text">
+        <img src="d1.jpg" alt="Community health dialogue at Okwach Center">
+        <div class="carousel-caption">
           <h3>Community Health Dialogue</h3>
           <p>Benefits of prenatal and postnatal visits at Okwach Center.</p>
-        </div>
-        <div class="carousel-image">
-          <img src="d1.jpg" alt="Community health dialogue at Okwach Center">
         </div>
       </div>
       <!-- Slide 2 -->
       <div class="carousel-slide">
-        <div class="carousel-text">
+        <img src="d2.jpg" alt="Dialogue at Oduwo Catholic Church grounds">
+        <div class="carousel-caption">
           <h3>Dialogue at Oduwo Catholic Church</h3>
-          <p>Engaging the community on health awareness at Oduwo Catholic Church grounds.</p>
-        </div>
-        <div class="carousel-image">
-          <img src="d2.jpg" alt="Dialogue at Oduwo Catholic Church grounds">
+          <p>Community dialogue on health at Oduwo Catholic Church grounds.</p>
         </div>
       </div>
       <!-- Slide 3 -->
       <div class="carousel-slide">
-        <div class="carousel-text">
+        <img src="d3.jpg" alt="Effective net use and vaccines at Makindu AIC Kowawa">
+        <div class="carousel-caption">
           <h3>Effective Net Use & Vaccines</h3>
-          <p>Promoting net use and benefits of vaccines to under-5 children at Makindu AIC Kowawa.</p>
-        </div>
-        <div class="carousel-image">
-          <img src="d3.jpg" alt="Effective net use and vaccines at Makindu AIC Kowawa">
+          <p>Promoting net use and vaccination benefits for under-5 children at Makindu AIC Kowawa.</p>
         </div>
       </div>
     </div>
@@ -152,7 +148,7 @@
   color: #333;
 }
 
-/* Right column */
+/* Right column carousel */
 .sbc-carousel {
   flex: 1;
   position: relative;
@@ -163,35 +159,24 @@
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-/* Carousel slides */
+/* Slides */
 .carousel-slide {
   display: none;
   text-align: center;
-  padding: 15px;
-  animation: fade 1s;
 }
 
-.carousel-text {
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #004080;
-}
-
-.carousel-image img {
+.carousel-slide img {
   width: 100%;
-  border-radius: 20px;
-  animation: spin 12s linear infinite; /* circular spin */
+  border-radius: 15px;
 }
 
-/* Animations */
-@keyframes fade {
-  from {opacity: .4;}
-  to {opacity: 1;}
-}
-
-@keyframes spin {
-  from {transform: rotateY(0deg);}
-  to {transform: rotateY(360deg);}
+/* Captions */
+.carousel-caption {
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 </style>
 
@@ -209,11 +194,10 @@ function showSBC() {
   sbcIndex++;
   if (sbcIndex > slides.length) {sbcIndex = 1}    
   slides[sbcIndex-1].style.display = "block";  
-  setTimeout(showSBC, 4000); // Change every 4 seconds
+  setTimeout(showSBC, 5000); // Change every 5 seconds
 }
 </script>
 
-      <li>Led community outreach, dialogue, and action days.</li>
       <li>Conducted surveys and trained Community Health Promoters.</li>
     </ul>
 
