@@ -5,251 +5,194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - John Ochieng’ Migele</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Animation Styles -->
   <style>
-    /* Moving title */
-    .moving-title {
-      display: inline-block;
-      white-space: nowrap;
-      animation: moveTitle 10s linear infinite;
-      font-size: 2rem;
+    /* Reset some styles */
+    body, h1, h2, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
       font-weight: bold;
-      color: #2c3e50;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #f39c12;
     }
 
-    @keyframes moveTitle {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      min-height: 100vh; /* full screen height for each section */
     }
 
-    /* Fly-up animation */
-    .fly-up {
-      animation: flyUp 1.5s ease-out;
+    #home {
+      background: url('background.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    @keyframes flyUp {
-      0% { transform: translateY(50px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
+    #home img.profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin: 20px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
 
-    /* Fly-down animation */
-    .fly-down {
-      animation: flyDown 1.5s ease-out;
-    }
-
-    @keyframes flyDown {
-      0% { transform: translateY(-50px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
     <h1>John Ochieng’ Migele</h1>
     <img src="profile.jpg" alt="John Ochieng’ Migele" class="profile-pic">
-    <p>Email: <a href="mailto:johnomigele@gmail.com">johnomigele@gmail.com</a> | Phone: 0759 926 350/0105052964</p>
+    <p>Email: <a href="mailto:johnomigele@gmail.com" style="color:#f39c12;">johnomigele@gmail.com</a></p>
     <p>Community Health & Development Professional</p>
-  </header>
+  </section>
 
-  <h1 class="moving-title">John Ochieng’ Migele - Portfolio</h1>
+  <!-- Profile Section -->
+  <section id="profile">
+    <h2>Profile</h2>
+    <p>
+      Dynamic and results-driven Community Health and Development Professional with hands-on
+      experience in digital health, programme implementation, and community mobilization.
+    </p>
+  </section>
 
-  <div class="container">
-    <h2 class="fly-up">Profile</h2>
-    <p>Dynamic and results-driven Community Health and Development Professional with hands-on experience in digital health, programme implementation, and community mobilization. Skilled in ODK KoboCollect, eCHIS, SPSS, and QGIS, with a strong background in customer service and administration. Passionate about fostering healthier, more resilient communities through evidence-based interventions.</p>
-
-    <h2 class="fly-down">Education</h2>
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
     <ul>
-      <li><strong>BSc. Community Health and Development</strong> – JOOUST (Sep 2021 – Expected Oct 17, 2025)</li>
-      <li><strong>Certificate in Information Technology</strong> – Renown Computer College (Aug 2021)</li>
-      <li><strong>Certificate in GIS for Population and Development Studies</strong> – Online (Oct–Nov 2023)</li>
+      <li><strong>BSc. Community Health and Development</strong> – JOOUST (2021–2025)</li>
+      <li><strong>Certificate in IT</strong> – Renown Computer College (2021)</li>
+      <li><strong>Certificate in GIS</strong> – Online Training (2023)</li>
     </ul>
+  </section>
 
-    <h2 class="fly-up">Key Skills</h2>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Key Skills</h2>
     <ul>
-      <li>Data Collection & Management: ODK KoboCollect, eCHIS, Google Forms</li>
-      <li>Data Analysis & Reporting: SPSS, QGIS, Power BI, Excel</li>
-      <li>Community Health Engagement: Communication, outreach, mobilization</li>
-      <li>Research & Evaluation: Surveys, assessments, operational research</li>
-      <li>Training & Capacity Building: Coaching MOH staff, CHPs, teachers, caregivers</li>
-      <li>Programme Management: KPI monitoring, stakeholder coordination</li>
-      <li>Customer Service & Administration: Front desk, billing, client relations</li>
+      <li>ODK KoboCollect, eCHIS, SPSS, QGIS</li>
+      <li>Data Analysis: Excel, Power BI</li>
+      <li>Community Health Engagement</li>
+      <li>Programme Management</li>
     </ul>
+  </section>
 
-    <h2 class="fly-down">Professional Experience</h2>
-    <p><strong>Assistant Inclusive Education Support Officer / Customer Care Desk</strong> – Ability Therapy Place, Nairobi (May 2025 – Sep 2025)</p>
-    <ul>
-      <li>Liaison between schools, communities, and the facility to strengthen partnerships.</li>
-      <li>Managed client inquiries, appointment scheduling, and referrals.</li>
-      <li>Handled billing, invoicing, and payments.</li>
-      <li>Facilitated training workshops on Individualized Education Plans (IEPs).</li>
-    </ul>
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
+   <!-- Assistant Inclusive Education Support Officer Section -->
+<section id="assistant-role" style="background: url('assistant-bg.jpg') no-repeat center center/cover; color: white; padding: 60px 20px;">
+  <h2>Assistant Inclusive Education Support Officer</h2>
+  <p>
+    Worked at Ability Therapy Place, Nairobi (May 2025 – Sep 2025). 
+    Acted as liaison between schools, communities, and the facility. 
+    Managed client inquiries, appointments, referrals, and facilitated training workshops.
+  </p>
 
-   
+  <div class="assistant-carousel" style="position: relative; max-width: 600px; margin: 40px auto; text-align: center; border-radius: 10px; overflow: hidden; background: rgba(0,0,0,0.5); padding: 10px;">
+    <img src="a1.jpg" alt="Workshop Image 1" class="active" style="width:100%; border-radius: 10px;">
+    <p class="carousel-caption" style="margin-top: 10px;">Training session with teachers on IEPs</p>
 
-<!-- Social Behavior Change Section -->
-<section id="social-behavior-change" style="padding:40px 20px; background:#f9f9f9;">
-  <h2 class="fly-up">Social Behavior Change</h2>
-  <div class="sbc-container">
-    <!-- Left side: main content -->
-    <div class="sbc-content">
-      <p>
-        In Social Behavior Change activities, I have engaged diverse communities to strengthen 
-        health-seeking behaviors and improve awareness on maternal, child, and preventive health. 
-        This includes dialogues on prenatal and postnatal visits, effective net use, and promoting 
-        childhood vaccinations.
-      </p>
-    </div>
-
-    <!-- Right side: carousel -->
-    <div class="sbc-carousel">
-      <!-- Slide 1 -->
-      <div class="carousel-slide">
-        <img src="d1.jpg" alt="Community health dialogue at Okwach Center">
-        <div class="carousel-caption">
-          <h3>Community Health Dialogue</h3>
-          <p>Benefits of prenatal and postnatal visits at Okwach Center.</p>
-        </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="carousel-slide">
-        <img src="d2.jpg" alt="Dialogue at Oduwo Catholic Church grounds">
-        <div class="carousel-caption">
-          <h3>Dialogue at Oduwo Catholic Church</h3>
-          <p>Community dialogue on health at Oduwo Catholic Church grounds.</p>
-        </div>
-      </div>
-      <!-- Slide 3 -->
-      <div class="carousel-slide">
-        <img src="d3.jpg" alt="Effective net use and vaccines at Makindu AIC Kowawa">
-        <div class="carousel-caption">
-          <h3>Effective Net Use & Vaccines</h3>
-          <p>Promoting net use and vaccination benefits for under-5 children at Makindu AIC Kowawa.</p>
-        </div>
-      </div>
-    </div>
+    <img src="a2.jpg" alt="Workshop Image 2" style="width:100%; border-radius: 10px; display:none;">
+    <p class="carousel-caption" style="margin-top: 10px; display:none;">Client engagement and community outreach</p>
   </div>
 </section>
 
-<style>
-/* Two-column layout */
-.sbc-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-/* Left column */
-.sbc-content {
-  flex: 1;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
-}
-
-/* Right column carousel */
-.sbc-carousel {
-  flex: 1;
-  position: relative;
-  max-width: 450px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-/* Slides */
-.carousel-slide {
-  display: none;
-  text-align: center;
-}
-
-.carousel-slide img {
-  width: 100%;
-  border-radius: 15px;
-}
-
-/* Captions */
-.carousel-caption {
-  padding: 10px;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-</style>
-
 <script>
-// Auto slide JavaScript
-let sbcIndex = 0;
-showSBC();
+  // Carousel for Assistant Section
+  const assistantImages = document.querySelectorAll("#assistant-role img");
+  const assistantCaptions = document.querySelectorAll("#assistant-role .carousel-caption");
+  let assistantIndex = 0;
 
-function showSBC() {
-  let i;
-  let slides = document.querySelectorAll("#social-behavior-change .carousel-slide");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  function showNextAssistantImage() {
+    assistantImages[assistantIndex].style.display = "none";
+    assistantCaptions[assistantIndex].style.display = "none";
+
+    assistantIndex = (assistantIndex + 1) % assistantImages.length;
+
+    assistantImages[assistantIndex].style.display = "block";
+    assistantCaptions[assistantIndex].style.display = "block";
   }
-  sbcIndex++;
-  if (sbcIndex > slides.length) {sbcIndex = 1}    
-  slides[sbcIndex-1].style.display = "block";  
-  setTimeout(showSBC, 5000); // Change every 5 seconds
-}
+
+  setInterval(showNextAssistantImage, 5000); // Change every 5 seconds
 </script>
 
-      <li>Conducted surveys and trained Community Health Promoters.</li>
-    </ul>
+    <p><strong>Social Behaviour Change Officer</strong> – Breakthrough Action Kenya (2024)</p>
+    <p><strong>Screener</strong> – CIHEB Kenya, Makindu (2024)</p>
+    <p><strong>Data Clerk</strong> – Breakthrough Action (2024)</p>
+  </section>
 
-    <p><strong>Screener</strong> – CIHEB Kenya, Makindu Dispensary (May 2024 – Sept 2024)</p>
+  <!-- Research Section -->
+  <section id="research">
+    <h2>Research & Projects</h2>
     <ul>
-      <li>Conducted screenings, patient data entry, and health education sessions.</li>
+      <li>Uptake of HIV Testing & Counselling among students – JOOUST</li>
+      <li>Early OT intervention on children with cerebral palsy – JOOTRH</li>
     </ul>
+  </section>
 
-    <p><strong>Data Clerk</strong> – Breakthrough Action (Oct 2024 – Nov 2024)</p>
-    <ul>
-      <li>Performed data entry, cleaning, visualization, and reporting.</li>
-    </ul>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: johnomigele@gmail.com</p>
+    <p>Phone: 0759 926 350/0105052964</p>
+  </section>
 
-    <p><strong>Community Health Assistant (Volunteer)</strong> – Makindu Dispensary (Jan 2023 – 2024)</p>
-    <ul>
-      <li>Implemented eCHIS V2, supported community health reporting, and household visits.</li>
-    </ul>
-
-    <h2 class="fly-up">Major Contributions & Achievements</h2>
-    <ul>
-      <li>Co-led Kenya’s eCHIS version 2 pilot in Muhoroni Sub-county.</li>
-      <li>Provided technical assistance to MOH on digital health and programme management.</li>
-      <li>Organized workshops and TWGs to enhance service delivery.</li>
-      <li>Instituted data-driven performance management through review meetings.</li>
-    </ul>
-
-    <h2 class="fly-down">Research & Projects</h2>
-    <ul>
-      <li>Final Year Research Project: Uptake of HIV Testing & Counselling among students.</li>
-      <li>Study: Effectiveness of early OT intervention on children with cerebral palsy at JOOTRH.</li>
-      <li>Assisted in multiple community health surveys.</li>
-    </ul>
-
-    <h2 class="fly-up">Certifications & Training</h2>
-    <ul>
-      <li>Community Health Basic Module – AMREF Kenya</li>
-      <li>Community Health Strategy Implementation – Makindu Dispensary</li>
-      <li>Data Analysis & Reporting using SPSS – JOOUST</li>
-      <li>GIS for Health Data Analysis – Online Training</li>
-      <li>Inclusive Education ToT Modules – Ability Therapy Place</li>
-    </ul>
-
-    <h2 class="fly-down">Community Involvement & Interests</h2>
-    <ul>
-      <li>Participation in local health campaigns and outreach.</li>
-      <li>Advocacy for inclusive education and health equity.</li>
-      <li>Interest in digital health innovations.</li>
-    </ul>
-  </div>
-
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 John Ochieng’ Migele | Portfolio Website</p>
   </footer>
+
 </body>
 </html>
