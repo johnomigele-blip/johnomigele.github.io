@@ -176,37 +176,25 @@
   <!-- Main Content -->
   <main>
 
-    <!-- Home Section -->
-<section id="home">
-  <h1 id="home-title">John Ochieng' Migele Portfolio</h1>
+  <!-- Home Section -->
+<section id="home" style="background: url('background.jpg') no-repeat center center/cover; color:white; text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden;">
+  <h1 id="floating-title" style="font-size:32px; font-weight:bold; position:relative; color:#f39c12;">
+    John Ochieng’ Migele Portfolio
+  </h1>
   <img src="profile.jpg" alt="John Ochieng’ Migele" class="profile-pic">
   <p>Email: <a href="mailto:johnomigele@gmail.com" style="color:#f39c12;">johnomigele@gmail.com</a></p>
-  <p>Community Health & Development Professional</p>
+  <p>Community Health & Development Professional, Researcher, M&E Professional</p>
 </section>
 
-<style>
-  /* Home title animation - floating up and down */
-  #home-title {
-    font-weight: bold;
-    font-size: 32px;
-    color: white;
-    position: relative;
-    animation: floatUpDown 3s ease-in-out 2s infinite;
-  }
-
-  @keyframes floatUpDown {
-    0% {
-      top: 0;
-    }
-    50% {
-      top: -20px; /* float up by 20px */
-    }
-    100% {
-      top: 0; /* return to original position */
-    }
-  }
-</style>
-
+<script>
+  // Floating title animation
+  const title = document.getElementById('floating-title');
+  setTimeout(() => {
+    title.style.transition = "transform 3s ease-in-out, opacity 3s ease-in-out";
+    title.style.transform = "translateY(-100px)";
+    title.style.opacity = "0";
+  }, 2000); // starts 2 seconds after page load
+</script>
     </section>
     <!-- Profile Section -->
     <section id="profile">
