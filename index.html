@@ -153,7 +153,6 @@
       padding: 20px;
       margin-top: 20px;
     }
-
     html {
       scroll-behavior: smooth;
     }
@@ -174,7 +173,6 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
   <!-- Main Content -->
   <main>
 
@@ -185,7 +183,6 @@
       <p>Email: <a href="mailto:johnomigele@gmail.com" style="color:#f39c12;">johnomigele@gmail.com</a></p>
       <p>Community Health & Development Professional</p>
     </section>
-
     <!-- Profile Section -->
     <section id="profile">
       <h2>Profile</h2>
@@ -197,7 +194,6 @@
         Proficient in ODK Kobo Collect, eCHIS, SPSS, and QGIS, backed by strong academic training and practical fieldwork. Committed to leveraging data-driven insights to foster healthier, more resilient communities while maintaining ethical and community-oriented approaches.
       </p>
     </section>
-
     <!-- Education Section -->
     <section id="education">
       <h2>Educational Qualifications</h2>
@@ -209,7 +205,6 @@
         <li><strong>Certificate in GIS for Population and Development Studies</strong> – Online Course (October - November 2023), QGIS: Spatial Data Analysis and Mapping</li>
       </ul>
     </section>
-
     <!-- Skills Section -->
     <section id="skills">
       <h2>Key Skills</h2>
@@ -223,11 +218,9 @@
         <li>Customer Service & Administration: Front desk, billing, client relations</li>
       </ul>
     </section>
-
     <!-- Experience Section -->
     <section id="experience">
       <h2>Professional Experience</h2>
-
      <!-- Assistant Inclusive Education Support Officer -->
 <div id="assistant-role" style="color:white; padding:40px; border-radius:10px; margin-bottom:30px;">
   <h3>Assistant Inclusive Education Support Officer</h3>
@@ -236,36 +229,28 @@
     <li>Training teachers, school admins, caregivers, occupational therapists, physiotherapists, speech & language pathologists on IEPs</li>
     <li>Community and school liaison, link person to the facility</li>
   </ul>
-
   <div class="carousel-bg" style="position: relative; width: 100%; max-width: 600px; height: 350px; margin: 30px auto; border-radius: 10px; overflow: hidden; display:flex; align-items:center; justify-content:center; background-size:cover; background-position:center;">
     <p class="carousel-caption active" style="color:white; font-size:18px; background: rgba(0,0,0,0.5); padding:10px; border-radius:5px; text-align:center;">Training session with teachers on IEPs</p>
   </div>
 </div>
-
 <script>
   const assistantBgImages = ["a1.jpg", "a2.jpg"];
   const assistantBgCaptions = [
     "Training session with teachers on IEPs",
     "Client engagement and community outreach"
   ];
-
   const carouselBgDiv = document.querySelector("#assistant-role .carousel-bg");
   const carouselCaption = carouselBgDiv.querySelector(".carousel-caption");
   let assistantBgIndex = 0;
-
   function showNextAssistantBg() {
     assistantBgIndex = (assistantBgIndex + 1) % assistantBgImages.length;
     carouselBgDiv.style.backgroundImage = `url(${assistantBgImages[assistantBgIndex]})`;
     carouselCaption.textContent = assistantBgCaptions[assistantBgIndex];
   }
-
   // Initialize first background
   carouselBgDiv.style.backgroundImage = `url(${assistantBgImages[0]})`;
-
   setInterval(showNextAssistantBg, 5000);
 </script>
-
-
       <!-- Social Behaviour Change Officer -->
       <div>
         <h3>Social Behaviour Change Officer – Community Level</h3>
@@ -274,7 +259,6 @@
           <li>Led community outreach, dialogue, and action days</li>
           <li>Conducted surveys and trained Community Health Promoters</li>
         </ul>
-
         <div class="carousel sbc-carousel">
           <img src="d1.jpg" alt="Community outreach 1" class="active">
           <p class="carousel-caption active">Community dialogue for pregnant mothers and breastfeeding mothers on importance of clinic visits(pre and post natal)</p>
@@ -286,7 +270,6 @@
           <p class="carousel-caption">Community action day on effective ITNs use at AIC Makindu Kowawa, acompanied by CHPs from Lower Tamu Community Health Unit in Muhoroni Subcounty</p>
         </div>
       </div>
-
       <!-- Other Roles -->
       <div>
         <h3>Screener</h3>
@@ -300,7 +283,6 @@
         <ul>
           <li>Data entry, cleaning, visualization, and report generation</li>
         </ul>
-
         <h3>Community Health Assistant (Volunteer)</h3>
         <p>Makindu Dispensary, Muhoroni Sub-county (Jan 2023 – Sep 2024)  Supporting Lower Tamu and Makindu Community Health Units</p>
         <ul>
@@ -309,9 +291,7 @@
           <p class="carousel-caption">HPV vaccination outreach at Okwach Primary in Muhoroni Subcounty</p>
         </ul>
       </div>
-
     </section>
-
     <!-- Research Section -->
     <section id="research">
       <h2>Research & Projects</h2>
@@ -321,21 +301,15 @@
         <li>Effectiveness of RTSS and ITNs use among under 5 children in Muhoroni Subcounty RA</li>
         <img src="lee2.jpg" alt="Data collection 2">
           <p class="carousel-caption">Data collection exercise where I was crossing River Omonyo Lee</p>
-
       </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: johnomigele@gmail.com</p>
-      <p>Phone: 0759 926 350 / 0105052964</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 John Ochieng’ Migele | Portfolio Website</p>
-    </footer>
+   <!-- Footer -->
+<footer>
+  <p>
+    Email: <a href="mailto:johnomigele@gmail.com" style="color:#f39c12;">johnomigele@gmail.com</a> | 
+    Phone: <strong>0759 926 350</strong> / <strong>0105052964</strong>
+  </p>
+  <p>&copy; 2025 John Ochieng’ Migele | Portfolio Website</p>
+</footer>
 
   </main>
 
