@@ -228,23 +228,43 @@
     <section id="experience">
       <h2>Professional Experience</h2>
 
-      <!-- Assistant Inclusive Education Support Officer -->
-      <div id="assistant-role" style="background: url('assistant-bg.jpg') no-repeat center center/cover; color:white; padding:40px; border-radius:10px; margin-bottom:30px;">
-        <h3>Assistant Inclusive Education Support Officer</h3>
-        <p>Ability Therapy Place, Nairobi (May 2025 – Present)</p>
-        <ul>
-          <li>Training teachers, school admins, caregivers, occupational therapists, physiotherapists, speech & language pathologists on IEPs</li>
-          <li>Community and school liaison, link person to the facility</li>
-        </ul>
+     <!-- Assistant Inclusive Education Support Officer -->
+<div id="assistant-role" style="color:white; padding:40px; border-radius:10px; margin-bottom:30px;">
+  <h3>Assistant Inclusive Education Support Officer</h3>
+  <p>Ability Therapy Place, Nairobi (May 2025 – Present)</p>
+  <ul>
+    <li>Training teachers, school admins, caregivers, occupational therapists, physiotherapists, speech & language pathologists on IEPs</li>
+    <li>Community and school liaison, link person to the facility</li>
+  </ul>
 
-        <div class="carousel">
-          <img src="a1.jpg" alt="Training session" class="active">
-          <p class="carousel-caption active">Training session with teachers on IEPs</p>
+  <div class="carousel-bg" style="position: relative; width: 100%; max-width: 600px; height: 350px; margin: 30px auto; border-radius: 10px; overflow: hidden; display:flex; align-items:center; justify-content:center; background-size:cover; background-position:center;">
+    <p class="carousel-caption active" style="color:white; font-size:18px; background: rgba(0,0,0,0.5); padding:10px; border-radius:5px; text-align:center;">Training session with teachers on IEPs</p>
+  </div>
+</div>
 
-          <img src="a2.jpg" alt="Community outreach">
-          <p class="carousel-caption">Client engagement and community outreach</p>
-        </div>
-      </div>
+<script>
+  const assistantBgImages = ["a1.jpg", "a2.jpg"];
+  const assistantBgCaptions = [
+    "Training session with teachers on IEPs",
+    "Client engagement and community outreach"
+  ];
+
+  const carouselBgDiv = document.querySelector("#assistant-role .carousel-bg");
+  const carouselCaption = carouselBgDiv.querySelector(".carousel-caption");
+  let assistantBgIndex = 0;
+
+  function showNextAssistantBg() {
+    assistantBgIndex = (assistantBgIndex + 1) % assistantBgImages.length;
+    carouselBgDiv.style.backgroundImage = `url(${assistantBgImages[assistantBgIndex]})`;
+    carouselCaption.textContent = assistantBgCaptions[assistantBgIndex];
+  }
+
+  // Initialize first background
+  carouselBgDiv.style.backgroundImage = `url(${assistantBgImages[0]})`;
+
+  setInterval(showNextAssistantBg, 5000);
+</script>
+
 
       <!-- Social Behaviour Change Officer -->
       <div>
@@ -257,13 +277,13 @@
 
         <div class="carousel sbc-carousel">
           <img src="d1.jpg" alt="Community outreach 1" class="active">
-          <p class="carousel-caption active">Community outreach for HPV vaccination at Oduwo and Oduwo Primary School</p>
+          <p class="carousel-caption active">Community dialogue for pregnant mothers and breastfeeding mothers on importance of clinic visits(pre and post natal)</p>
 
           <img src="d2.jpg" alt="Community outreach 2">
-          <p class="carousel-caption">Community dialogue for pregnant mothers and breastfeeding mothers on importance of clinic visits</p>
+          <p class="carousel-caption">Community dialogue for pregnant mothers and breastfeeding mothers on importance of clinic visits at Oduwo Catholic Church</p>
 
           <img src="d3.jpg" alt="Community outreach 3">
-          <p class="carousel-caption">Data review at Nyangoma Polytechnic in Muhoroni Subcounty</p>
+          <p class="carousel-caption">Community action day on effective ITNs use at AIC Makindu Kowawa, acompanied by CHPs from Lower Tamu Community Health Unit in Muhoroni Subcounty</p>
         </div>
       </div>
 
@@ -282,9 +302,11 @@
         </ul>
 
         <h3>Community Health Assistant (Volunteer)</h3>
-        <p>Makindu Dispensary, Muhoroni Sub-county (Jan 2023 – 2024)</p>
+        <p>Makindu Dispensary, Muhoroni Sub-county (Jan 2023 – Sep 2024)  Supporting Lower Tamu and Makindu Community Health Units</p>
         <ul>
-          <li>Implemented eCHIS V2, conducted household visits, supported CHU reporting</li>
+          <li>Implemented eCHIS V2, conducted household visits, supported CHU reporting conducted support supervision to the CHPs, defaulter identification and tracing, WASH services in the communities Health units</li>
+          <img src="o3.jpg" alt="Outreach 2">
+          <p class="carousel-caption">HPV vaccination outreach at Okwach Primary in Muhoroni Subcounty</p>
         </ul>
       </div>
 
@@ -296,6 +318,10 @@
       <ul>
         <li>Uptake of HIV Testing & Counselling among students at JOOUST</li>
         <li>Effectiveness of early occupational therapy intervention on development among children with cerebral palsy at JOOTRH</li>
+        <li>Effectiveness of RTSS and ITNs use among under 5 children in Muhoroni Subcounty RA</li>
+        <img src="lee2.jpg" alt="Data collection 2">
+          <p class="carousel-caption">Data collection exercise where I was crossing River Omonyo Lee</p>
+
       </ul>
     </section>
 
