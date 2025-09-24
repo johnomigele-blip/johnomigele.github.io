@@ -176,9 +176,9 @@
   <!-- Main Content -->
   <main>
 
-  <!-- Home Section -->
-<section id="home" style="background: url('background.jpg') no-repeat center center/cover; color:white; text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden;">
-  <h1 id="floating-title" style="font-size:32px; font-weight:bold; position:relative; color:#f39c12;">
+ <!-- Home Section -->
+<section id="home" style="background: url('background.jpg') no-repeat center center/cover; color:white; text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; overflow:hidden; height:100vh;">
+  <h1 id="floating-title" style="font-size:36px; font-weight:bold; color:#f39c12; position:relative;">
     John Ochieng’ Migele Portfolio
   </h1>
   <img src="profile.jpg" alt="John Ochieng’ Migele" class="profile-pic">
@@ -187,13 +187,16 @@
 </section>
 
 <script>
-  // Floating title animation
   const title = document.getElementById('floating-title');
+  
+  // Give the title an initial position
+  title.style.transform = "translateY(50px)";
+  
+  // Start the upward animation after 2 seconds
   setTimeout(() => {
-    title.style.transition = "transform 3s ease-in-out, opacity 3s ease-in-out";
-    title.style.transform = "translateY(-100px)";
-    title.style.opacity = "0";
-  }, 2000); // starts 2 seconds after page load
+    title.style.transition = "transform 3s ease-in-out";
+    title.style.transform = "translateY(-50px)"; // moves up
+  }, 2000);
 </script>
     </section>
     <!-- Profile Section -->
