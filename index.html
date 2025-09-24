@@ -177,11 +177,36 @@
   <main>
 
     <!-- Home Section -->
-    <section id="home">
-      <h1>John Ochieng’ Migele</h1>
-      <img src="profile.jpg" alt="John Ochieng’ Migele" class="profile-pic">
-      <p>Email: <a href="mailto:johnomigele@gmail.com" style="color:#f39c12;">johnomigele@gmail.com</a></p>
-      <p>Community Health & Development Professional</p>
+<section id="home">
+  <h1 id="home-title">John Ochieng' Migele Portfolio</h1>
+  <img src="profile.jpg" alt="John Ochieng’ Migele" class="profile-pic">
+  <p>Email: <a href="mailto:johnomigele@gmail.com" style="color:#f39c12;">johnomigele@gmail.com</a></p>
+  <p>Community Health & Development Professional</p>
+</section>
+
+<style>
+  /* Home title animation - floating up and down */
+  #home-title {
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+    position: relative;
+    animation: floatUpDown 3s ease-in-out 2s infinite;
+  }
+
+  @keyframes floatUpDown {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: -20px; /* float up by 20px */
+    }
+    100% {
+      top: 0; /* return to original position */
+    }
+  }
+</style>
+
     </section>
     <!-- Profile Section -->
     <section id="profile">
