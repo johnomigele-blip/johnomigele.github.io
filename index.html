@@ -4,50 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - John Ochieng’ Migele</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-    /* Reset some styles */
-    body, h1, h2, p, ul {
+    /* General Reset */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
     }
 
-    /* Navbar */
+    /* Sidebar Navigation */
     nav {
+      width: 250px;
       background: #2c3e50;
       color: white;
-      padding: 15px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      height: 100vh;
     }
+
+    nav h1 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
     nav ul {
-      display: flex;
       list-style: none;
-      justify-content: center;
-      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding-left: 0;
+      margin-top: 20px;
     }
+
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      padding: 10px 15px;
+      display: block;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
+
     nav ul li a:hover {
-      color: #f39c12;
+      background: #f39c12;
+      color: white;
     }
 
-    /* Sections */
+    /* Main content */
+    main {
+      flex: 1;
+      overflow-y: auto;
+    }
+
     section {
-      padding: 60px 20px;
-      min-height: 100vh; /* full screen height for each section */
+      padding: 60px 40px;
+      min-height: 100vh;
+      border-bottom: 1px solid #ddd;
     }
 
+    section h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-size: 28px;
+      border-bottom: 2px solid #f39c12;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Home Section */
     #home {
       background: url('background.jpg') no-repeat center center/cover;
       color: white;
@@ -55,6 +92,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
 
     #home img.profile-pic {
@@ -62,8 +100,49 @@
       height: 150px;
       border-radius: 50%;
       border: 3px solid white;
-      margin: 20px auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* Carousel Styles */
+    .carousel {
+      position: relative;
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: center;
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+    }
+
+    .carousel img {
+      width: 100%;
+      border-radius: 10px;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel-caption {
+      color: white;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .carousel-caption.active {
+      display: block;
     }
 
     /* Footer */
@@ -71,14 +150,20 @@
       background: #2c3e50;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Sidebar Navigation -->
   <nav>
+    <h1>John Migele</h1>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#profile">Profile</a></li>
@@ -90,109 +175,170 @@
     </ul>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home">
-    <h1>John Ochieng’ Migele</h1>
-    <img src="profile.jpg" alt="John Ochieng’ Migele" class="profile-pic">
-    <p>Email: <a href="mailto:johnomigele@gmail.com" style="color:#f39c12;">johnomigele@gmail.com</a></p>
-    <p>Community Health & Development Professional</p>
-  </section>
+  <!-- Main Content -->
+  <main>
 
-  <!-- Profile Section -->
-  <section id="profile">
-    <h2>Profile</h2>
-    <p>
-      Dynamic and results-driven Community Health and Development Professional with hands-on
-      experience in digital health, programme implementation, and community mobilization.
-    </p>
-  </section>
+    <!-- Home Section -->
+    <section id="home">
+      <h1>John Ochieng’ Migele</h1>
+      <img src="profile.jpg" alt="John Ochieng’ Migele" class="profile-pic">
+      <p>Email: <a href="mailto:johnomigele@gmail.com" style="color:#f39c12;">johnomigele@gmail.com</a></p>
+      <p>Community Health & Development Professional</p>
+    </section>
 
-  <!-- Education Section -->
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>BSc. Community Health and Development</strong> – JOOUST (2021–2025)</li>
-      <li><strong>Certificate in IT</strong> – Renown Computer College (2021)</li>
-      <li><strong>Certificate in GIS</strong> – Online Training (2023)</li>
-    </ul>
-  </section>
+    <!-- Profile Section -->
+    <section id="profile">
+      <h2>Profile</h2>
+      <p>
+        A dynamic and results-driven Community Health and Development professional with a passion for transformative public health initiatives. 
+        Experienced in data collection, analysis, and community mobilization with hands-on experience in primary healthcare, social behavior change, and data management.
+      </p>
+      <p>
+        Proficient in ODK Kobo Collect, eCHIS, SPSS, and QGIS, backed by strong academic training and practical fieldwork. Committed to leveraging data-driven insights to foster healthier, more resilient communities while maintaining ethical and community-oriented approaches.
+      </p>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Key Skills</h2>
-    <ul>
-      <li>ODK KoboCollect, eCHIS, SPSS, QGIS</li>
-      <li>Data Analysis: Excel, Power BI</li>
-      <li>Community Health Engagement</li>
-      <li>Programme Management</li>
-    </ul>
-  </section>
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Educational Qualifications</h2>
+      <ul>
+        <li><strong>BSc. Community Health and Development</strong> – Jaramogi Oginga Odinga University of Science and Technology (2021 – Expected 2025)
+          <br>Relevant Coursework: Public Health Policy, Epidemiology, Community Health Strategy, Health Data Analysis
+        </li>
+        <li><strong>Certificate in Information Technology</strong> – Renown Computer College (August 2021)</li>
+        <li><strong>Certificate in GIS for Population and Development Studies</strong> – Online Course (October - November 2023), QGIS: Spatial Data Analysis and Mapping</li>
+      </ul>
+    </section>
 
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Professional Experience</h2>
-   <!-- Assistant Inclusive Education Support Officer Section -->
-<section id="assistant-role" style="background: url('assistant-bg.jpg') no-repeat center center/cover; color: white; padding: 60px 20px;">
-  <h2>Assistant Inclusive Education Support Officer</h2>
-  <p>
-    Worked at Ability Therapy Place, Nairobi (May 2025 – Sep 2025). 
-    Acted as liaison between schools, communities, and the facility. 
-    Managed client inquiries, appointments, referrals, and facilitated training workshops.
-  </p>
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Key Skills</h2>
+      <ul>
+        <li>Data Collection & Management: Skilled in ODK Kobo Collect and eCHIS</li>
+        <li>Data Analysis & Reporting: Proficient in SPSS and QGIS</li>
+        <li>Community Health Engagement: Skilled in health communication and outreach</li>
+        <li>Research & Evaluation: Conducted health assessments and field surveys</li>
+        <li>Training & Capacity Building: Competent in training community health workers</li>
+        <li>Problem Solving & Adaptability: Thrives in dynamic health settings</li>
+        <li>Customer Service & Administration: Front desk, billing, client relations</li>
+      </ul>
+    </section>
 
-  <div class="assistant-carousel" style="position: relative; max-width: 600px; margin: 40px auto; text-align: center; border-radius: 10px; overflow: hidden; background: rgba(0,0,0,0.5); padding: 10px;">
-    <img src="a1.jpg" alt="Workshop Image 1" class="active" style="width:100%; border-radius: 10px;">
-    <p class="carousel-caption" style="margin-top: 10px;">Training session with teachers on IEPs</p>
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Professional Experience</h2>
 
-    <img src="a2.jpg" alt="Workshop Image 2" style="width:100%; border-radius: 10px; display:none;">
-    <p class="carousel-caption" style="margin-top: 10px; display:none;">Client engagement and community outreach</p>
-  </div>
-</section>
+      <!-- Assistant Inclusive Education Support Officer -->
+      <div id="assistant-role" style="background: url('assistant-bg.jpg') no-repeat center center/cover; color:white; padding:40px; border-radius:10px; margin-bottom:30px;">
+        <h3>Assistant Inclusive Education Support Officer</h3>
+        <p>Ability Therapy Place, Nairobi (May 2025 – Present)</p>
+        <ul>
+          <li>Training teachers, school admins, caregivers, occupational therapists, physiotherapists, speech & language pathologists on IEPs</li>
+          <li>Community and school liaison, link person to the facility</li>
+        </ul>
 
-<script>
-  // Carousel for Assistant Section
-  const assistantImages = document.querySelectorAll("#assistant-role img");
-  const assistantCaptions = document.querySelectorAll("#assistant-role .carousel-caption");
-  let assistantIndex = 0;
+        <div class="carousel">
+          <img src="a1.jpg" alt="Training session" class="active">
+          <p class="carousel-caption active">Training session with teachers on IEPs</p>
 
-  function showNextAssistantImage() {
-    assistantImages[assistantIndex].style.display = "none";
-    assistantCaptions[assistantIndex].style.display = "none";
+          <img src="a2.jpg" alt="Community outreach">
+          <p class="carousel-caption">Client engagement and community outreach</p>
+        </div>
+      </div>
 
-    assistantIndex = (assistantIndex + 1) % assistantImages.length;
+      <!-- Social Behaviour Change Officer -->
+      <div>
+        <h3>Social Behaviour Change Officer – Community Level</h3>
+        <p>Breakthrough Action Kenya, Muhoroni Sub-county (Feb 2024 – Sept 2024)</p>
+        <ul>
+          <li>Led community outreach, dialogue, and action days</li>
+          <li>Conducted surveys and trained Community Health Promoters</li>
+        </ul>
 
-    assistantImages[assistantIndex].style.display = "block";
-    assistantCaptions[assistantIndex].style.display = "block";
-  }
+        <div class="carousel sbc-carousel">
+          <img src="d1.jpg" alt="Community outreach 1" class="active">
+          <p class="carousel-caption active">Community outreach for HPV vaccination at Oduwo and Oduwo Primary School</p>
 
-  setInterval(showNextAssistantImage, 5000); // Change every 5 seconds
-</script>
+          <img src="d2.jpg" alt="Community outreach 2">
+          <p class="carousel-caption">Community dialogue for pregnant mothers and breastfeeding mothers on importance of clinic visits</p>
 
-    <p><strong>Social Behaviour Change Officer</strong> – Breakthrough Action Kenya (2024)</p>
-    <p><strong>Screener</strong> – CIHEB Kenya, Makindu (2024)</p>
-    <p><strong>Data Clerk</strong> – Breakthrough Action (2024)</p>
-  </section>
+          <img src="d3.jpg" alt="Community outreach 3">
+          <p class="carousel-caption">Data review at Nyangoma Polytechnic in Muhoroni Subcounty</p>
+        </div>
+      </div>
 
-  <!-- Research Section -->
-  <section id="research">
-    <h2>Research & Projects</h2>
-    <ul>
-      <li>Uptake of HIV Testing & Counselling among students – JOOUST</li>
-      <li>Early OT intervention on children with cerebral palsy – JOOTRH</li>
-    </ul>
-  </section>
+      <!-- Other Roles -->
+      <div>
+        <h3>Screener</h3>
+        <p>Makindu Dispensary, CIHEB Kenya, Muhoroni Sub-county (May 2024 – Sept 2024)</p>
+        <ul>
+          <li>Performed health screenings, patient data entry, and education sessions</li>
+        </ul>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: johnomigele@gmail.com</p>
-    <p>Phone: 0759 926 350/0105052964</p>
-  </section>
+        <h3>Data Clerk</h3>
+        <p>Breakthrough Action (Oct 2024 – Nov 2024)</p>
+        <ul>
+          <li>Data entry, cleaning, visualization, and report generation</li>
+        </ul>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 John Ochieng’ Migele | Portfolio Website</p>
-  </footer>
+        <h3>Community Health Assistant (Volunteer)</h3>
+        <p>Makindu Dispensary, Muhoroni Sub-county (Jan 2023 – 2024)</p>
+        <ul>
+          <li>Implemented eCHIS V2, conducted household visits, supported CHU reporting</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+      <h2>Research & Projects</h2>
+      <ul>
+        <li>Uptake of HIV Testing & Counselling among students at JOOUST</li>
+        <li>Effectiveness of early occupational therapy intervention on development among children with cerebral palsy at JOOTRH</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: johnomigele@gmail.com</p>
+      <p>Phone: 0759 926 350 / 0105052964</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 John Ochieng’ Migele | Portfolio Website</p>
+    </footer>
+
+  </main>
+
+  <!-- Carousel Script -->
+  <script>
+    // Assistant carousel
+    const assistantImages = document.querySelectorAll("#assistant-role .carousel img");
+    const assistantCaptions = document.querySelectorAll("#assistant-role .carousel .carousel-caption");
+    let assistantIndex = 0;
+    setInterval(() => {
+      assistantImages[assistantIndex].style.display = "none";
+      assistantCaptions[assistantIndex].style.display = "none";
+      assistantIndex = (assistantIndex + 1) % assistantImages.length;
+      assistantImages[assistantIndex].style.display = "block";
+      assistantCaptions[assistantIndex].style.display = "block";
+    }, 5000);
+
+    // Social Behaviour Change carousel
+    const sbcImages = document.querySelectorAll(".sbc-carousel img");
+    const sbcCaptions = document.querySelectorAll(".sbc-carousel .carousel-caption");
+    let sbcIndex = 0;
+    setInterval(() => {
+      sbcImages[sbcIndex].style.display = "none";
+      sbcCaptions[sbcIndex].style.display = "none";
+      sbcIndex = (sbcIndex + 1) % sbcImages.length;
+      sbcImages[sbcIndex].style.display = "block";
+      sbcCaptions[sbcIndex].style.display = "block";
+    }, 5000);
+  </script>
 
 </body>
 </html>
