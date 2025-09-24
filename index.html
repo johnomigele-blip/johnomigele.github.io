@@ -246,35 +246,38 @@
     <!-- Experience Section -->
     <section id="experience">
       <h2>Professional Experience</h2>
-     <!-- Assistant Inclusive Education Support Officer -->
-<div id="assistant-role" style="color:white; padding:40px; border-radius:10px; margin-bottom:30px;">
+    <!-- Assistant Inclusive Education Support Officer -->
+<div id="assistant-role" style="color:white; padding:40px; border-radius:10px; margin-bottom:30px; background:#34495e;">
   <h3>Assistant Inclusive Education Support Officer</h3>
   <p>Ability Therapy Place, Nairobi (May 2025 – Present)</p>
   <ul>
     <li>Training teachers, school admins, caregivers, occupational therapists, physiotherapists, speech & language pathologists on IEPs</li>
     <li>Community and school liaison, link person to the facility</li>
   </ul>
-  <div class="carousel-bg" style="position: relative; width: 100%; max-width: 600px; height: 350px; margin: 30px auto; border-radius: 10px; overflow: hidden; display:flex; align-items:center; justify-content:center; background-size:cover; background-position:center;">
-    <p class="carousel-caption active" style="color:white; font-size:18px; background: rgba(0,0,0,0.5); padding:10px; border-radius:5px; text-align:center;">Training session with teachers on IEPs</p>
+
+  <div class="carousel" style="max-width:600px; margin:20px auto; text-align:center; border-radius:10px; overflow:hidden; background:rgba(0,0,0,0.5); padding:10px;">
+    <img src="a1.jpg" alt="Training session" class="active" style="width:100%; border-radius:10px;">
+    <p class="carousel-caption active" style="color:white; margin-top:10px;">Training session with teachers on IEPs</p>
+
+    <img src="a2.jpg" alt="Community outreach" style="width:100%; border-radius:10px;">
+    <p class="carousel-caption">Client engagement and community outreach</p>
   </div>
 </div>
+
 <script>
-  const assistantBgImages = ["a1.jpg", "a2.jpg"];
-  const assistantBgCaptions = [
-    "Training session with teachers on IEPs",
-    "Client engagement and community outreach"
-  ];
-  const carouselBgDiv = document.querySelector("#assistant-role .carousel-bg");
-  const carouselCaption = carouselBgDiv.querySelector(".carousel-caption");
-  let assistantBgIndex = 0;
-  function showNextAssistantBg() {
-    assistantBgIndex = (assistantBgIndex + 1) % assistantBgImages.length;
-    carouselBgDiv.style.backgroundImage = `url(${assistantBgImages[assistantBgIndex]})`;
-    carouselCaption.textContent = assistantBgCaptions[assistantBgIndex];
-  }
-  // Initialize first background
-  carouselBgDiv.style.backgroundImage = `url(${assistantBgImages[0]})`;
-  setInterval(showNextAssistantBg, 5000);
+  // Carousel for Assistant Inclusive Education Support Officer
+  const assistantImages = document.querySelectorAll("#assistant-role .carousel img");
+  const assistantCaptions = document.querySelectorAll("#assistant-role .carousel .carousel-caption");
+  let assistantIndex = 0;
+
+  setInterval(() => {
+    assistantImages.forEach(img => img.style.display = "none");
+    assistantCaptions.forEach(c => c.style.display = "none");
+
+    assistantIndex = (assistantIndex + 1) % assistantImages.length;
+    assistantImages[assistantIndex].style.display = "block";
+    assistantCaptions[assistantIndex].style.display = "block";
+  }, 5000);
 </script>
       <!-- Social Behaviour Change Officer -->
       <div>
