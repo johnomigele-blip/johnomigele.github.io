@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://johnomigele.github.io/johnomigele-portfolio/sitemap.xml
